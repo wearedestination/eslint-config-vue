@@ -11,6 +11,7 @@ module.exports = {
     ],
     "rules": {
         "curly": "error",
+        "no-undef": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
         "vue/html-indent": [
             "error",
