@@ -5,13 +5,37 @@ module.exports = {
         "sourceType": "module"
     },
     "extends": [
-        "eslint:recommended",
+        "eslint-config-airbnb-base",
         "plugin:@typescript-eslint/recommended",
         "plugin:vue/vue3-recommended"
     ],
     "rules": {
         "curly": "error",
         "no-undef": "off",
+        "indent": [
+            "error",
+            4
+        ],
+        "max-len": "off",
+        "comma-dangle": "off",
+        "object-curly-spacing": "off",
+        "lines-between-class-members": "off",
+        "no-use-before-define": "off",
+        "no-new": "off",
+        "object-curly-newline": "off",
+        "no-console": "off",
+        "no-confusing-arrow": [
+            "error",
+            {
+                "onlyOneSimpleParam": true
+            }
+        ],
+        "import/prefer-default-export": "off",
+        "import/no-unresolved": "off",
+        "import/extensions": [
+            "error",
+            "never"
+        ],
         "@typescript-eslint/no-non-null-assertion": "off",
         "vue/html-indent": [
             "error",
@@ -32,6 +56,6 @@ module.exports = {
         "vue/max-attributes-per-line": "off",
         "vue/multi-word-component-names": "off",
         "vue/no-v-html": "off",
-        "vue/singleline-html-element-content-newline": "off",
+        "vue/singleline-html-element-content-newline": "off"
     }
-}
+};
