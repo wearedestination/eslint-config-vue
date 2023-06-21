@@ -24,6 +24,10 @@ module.exports = {
         "no-new": "off",
         "object-curly-newline": "off",
         "no-console": "off",
+        "func-names": [
+            "error",
+            "as-needed"
+        ],
         "no-confusing-arrow": [
             "error",
             {
