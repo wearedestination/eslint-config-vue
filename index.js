@@ -12,11 +12,10 @@ module.exports = {
     "rules": {
         "curly": "error",
         "no-undef": "off",
-        "indent": [
-            "error",
-            4
-        ],
+        "indent": "off",
         "max-len": "off",
+        "function-paren-newline": "off",
+        "implicit-arrow-linebreak": "off",
         "comma-dangle": "off",
         "object-curly-spacing": "off",
         "lines-between-class-members": "off",
@@ -24,6 +23,7 @@ module.exports = {
         "no-new": "off",
         "object-curly-newline": "off",
         "no-console": "off",
+        "no-plusplus": "off",
         "func-names": [
             "error",
             "as-needed"
@@ -38,7 +38,11 @@ module.exports = {
         "import/no-unresolved": "off",
         "import/extensions": [
             "error",
-            "never"
+            "ignorePackages",
+            {
+                "ts": "never",
+                "js": "never"
+            }
         ],
         "@typescript-eslint/no-non-null-assertion": "off",
         "vue/html-indent": [
