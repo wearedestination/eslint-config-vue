@@ -24,6 +24,9 @@ module.exports = {
         "object-curly-newline": "off",
         "no-console": "off",
         "no-plusplus": "off",
+        "arrow-parens": "off",
+        "no-shadow": "off",
+        "prefer-destructuring": "off",
         "func-names": [
             "error",
             "as-needed"
