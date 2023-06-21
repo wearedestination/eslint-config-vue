@@ -34,6 +34,12 @@ module.exports = {
                 "onlyOneSimpleParam": true
             }
         ],
+        "no-param-reassign": [
+            "error",
+            {
+                "props": false
+            }
+        ],
         "import/prefer-default-export": "off",
         "import/no-unresolved": "off",
         "import/extensions": [
