@@ -18,6 +18,7 @@ module.exports = {
         "implicit-arrow-linebreak": "off",
         "comma-dangle": "off",
         "object-curly-spacing": "off",
+        "newline-per-chained-call": "off",
         "lines-between-class-members": "off",
         "no-use-before-define": "off",
         "no-new": "off",
