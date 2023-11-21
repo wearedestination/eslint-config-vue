@@ -14,6 +14,7 @@ module.exports = {
         "no-undef": "off",
         "indent": "off",
         "max-len": "off",
+        "quotes": "off",
         "function-paren-newline": "off",
         "implicit-arrow-linebreak": "off",
         "comma-dangle": "off",
