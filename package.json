@@ -20,7 +20,7 @@
         "quoteProps": "preserve"
     },
     "dependencies": {
-        "@destination/eslint-config": "^1.4.0",
+        "@destination/eslint-config": "^1.4.1",
         "eslint-plugin-vue": "^9.20.0"
     },
     "devDependencies": {
