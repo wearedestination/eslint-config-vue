@@ -10,7 +10,10 @@ module.exports = {
         "plugin:vue/vue3-recommended"
     ],
     "rules": {
-        "curly": "error",
+        "curly": [
+            "error",
+            "all"
+        ],
         "no-undef": "off",
         "indent": "off",
         "max-len": "off",
