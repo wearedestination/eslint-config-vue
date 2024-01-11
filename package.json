@@ -12,15 +12,20 @@
     "files": [
         "index.js"
     ],
+    "scripts": {
+        "prettier:check": "prettier . --check",
+        "prettier:write": "prettier . --write"
+    },
+    "prettier": {
+        "quoteProps": "preserve"
+    },
     "dependencies": {
-        "@typescript-eslint/eslint-plugin": "^5.60.0",
-        "@typescript-eslint/parser": "^5.60.0",
-        "eslint-config-airbnb-base": "^15.0.0",
-        "eslint-plugin-import": "^2.27.5",
+        "@destination/eslint-config": "^1.3.5",
         "eslint-plugin-vue": "^9.15.0"
     },
     "devDependencies": {
-        "eslint": "^8.4.3"
+        "eslint": "^8.4.3",
+        "prettier": "^3.0.1"
     },
     "peerDependencies": {
         "eslint": "^8.0.0"
