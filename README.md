@@ -16,25 +16,23 @@ bun add @destination/eslint-config-vue eslint --dev
 Your `eslint.config.js` file should look something like this:
 
 ```js
-import { defineConfig } from "eslint/config";
+import destinationEsLintConfigVue from "@destination/eslint-config-vue";
+
+export default destinationEsLintConfigVue;
+```
+
+Or, if you need to specify additional configuration:
+
+```js
+import { defineConfig, globalIgnores } from "eslint/config";
 import destinationEsLintConfigVue from "@destination/eslint-config-vue";
 
 export default defineConfig([
-  destinationEsLintConfigVue,
-  {
-    files: ['assets/**/*.{ts,js,vue}'],
-    settings: {
-      "import-x/resolver": {
-        alias: {
-          map: [
-            ['@', './assets'],
-          ],
-        }
-      },
-    },
-  },
+  globalIgnores([
+    "assets/some-ignored-file.ts",
+    "assets/another-ignored-file.ts",
+  ]),
 ]);
-
 ```
 
 Run `eslint` as normal e.g.:
