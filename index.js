@@ -1,27 +1,26 @@
-module.exports = {
-    "parser": "vue-eslint-parser",
-    "parserOptions": {
-        "parser": "@typescript-eslint/parser",
-        "sourceType": "module",
+import tseslint from "typescript-eslint";
+import pluginVue from "eslint-plugin-vue";
+import sharedEslintConfig from "@destination/eslint-config";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
+
+export default tseslint.config(
+  {
+    extends: [sharedEslintConfig, ...pluginVue.configs["flat/recommended"]],
+    languageOptions: {
+      parserOptions: {
+        extraFileExtensions: [".vue"],
+      },
     },
-    "extends": ["@destination/eslint-config", "plugin:vue/vue3-recommended"],
-    "rules": {
-        "vue/html-indent": ["error", 4],
-        "vue/html-self-closing": [
-            "error",
-            {
-                "html": {
-                    "void": "always",
-                    "normal": "never",
-                    "component": "always",
-                },
-                "svg": "always",
-                "math": "always",
-            },
-        ],
-        "vue/max-attributes-per-line": "off",
-        "vue/multi-word-component-names": "off",
-        "vue/no-v-html": "off",
-        "vue/singleline-html-element-content-newline": "off",
+    rules: {
+      "vue/multi-word-component-names": "off",
+      "vue/no-mutating-props": [
+        "error",
+        {
+          shallowOnly: true,
+        },
+      ],
+      "vue/require-default-prop": "off",
     },
-};
+  },
+  eslintConfigPrettier,
+);
