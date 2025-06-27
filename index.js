@@ -5,7 +5,10 @@ import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default tseslint.config(
   {
-    extends: [destinationEsLintConfig, ...pluginVue.configs["flat/recommended"]],
+    extends: [
+      destinationEsLintConfig,
+      ...pluginVue.configs["flat/recommended"],
+    ],
     languageOptions: {
       parserOptions: {
         extraFileExtensions: [".vue"],
