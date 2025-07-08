@@ -16,9 +16,7 @@ bun add @destination/eslint-config-vue eslint --dev
 Your `eslint.config.js` file should look something like this:
 
 ```js
-import destinationEsLintConfigVue from "@destination/eslint-config-vue";
-
-export default destinationEsLintConfigVue;
+export { default } from "@destination/eslint-config-vue";
 ```
 
 Or, if you need to specify additional configuration:
