@@ -23,6 +23,12 @@ export default tseslint.config(
         },
       ],
       "vue/require-default-prop": "off",
+      "vue/no-undef-components": [
+        "error",
+        {
+          ignorePatterns: [],
+        },
+      ],
     },
   },
   eslintConfigPrettier,
