@@ -29,6 +29,29 @@ export default tseslint.config(
           ignorePatterns: [],
         },
       ],
+      "vue/component-api-style": ["error", ["script-setup"]],
+      "vue/no-unused-properties": [
+        "error",
+        {
+          deepData: true,
+          groups: ["props", "data", "computed", "methods", "setup"],
+        },
+      ],
+      "vue/prefer-use-template-ref": "error",
+      "vue/block-lang": ["error", { script: { lang: "ts" } }],
+      "vue/require-typed-ref": "error",
+      "vue/define-props-declaration": ["error", "type-based"],
+      "vue/define-emits-declaration": ["error", "type-based"],
+      "vue/define-macros-order": [
+        "error",
+        { order: ["defineProps", "defineEmits"] },
+      ],
+      "vue/block-order": [
+        "error",
+        {
+          order: ["script[setup]", "template", "style", "script:not([setup])"],
+        },
+      ],
     },
   },
   eslintConfigPrettier,
