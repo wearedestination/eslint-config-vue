@@ -8,7 +8,7 @@ and requires ESLint v9.0.0 or later.
 ## Installation
 
 ```sh
-npm add @destination/eslint-config-vue eslint --dev
+npm install @destination/eslint-config-vue eslint --save-dev
 ```
 
 ## Usage
