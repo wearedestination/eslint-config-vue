@@ -8,7 +8,7 @@ and requires ESLint v9.0.0 or later.
 ## Installation
 
 ```sh
-bun add @destination/eslint-config-vue eslint --dev
+npm add @destination/eslint-config-vue eslint --dev
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ export default defineConfig([
 Run `eslint` as normal e.g.:
 
 ```sh
-bun run eslint 'assets/**/*.{js,ts,vue}'
+npm run eslint 'assets/**/*.{js,ts,vue}'
 ```
 
 ## License
