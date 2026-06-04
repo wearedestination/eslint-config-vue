@@ -17,7 +17,7 @@
     "prettier:write": "prettier . --write"
   },
   "dependencies": {
-    "@destination/eslint-config": "^2.1.2",
+    "@destination/eslint-config": "^3.0.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.8.0",
     "typescript-eslint": "^8.58.2"
