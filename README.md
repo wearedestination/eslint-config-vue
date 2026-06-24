@@ -30,6 +30,7 @@ export default defineConfig([
     "assets/some-ignored-file.ts",
     "assets/another-ignored-file.ts",
   ]),
+  destinationEsLintConfigVue,
 ]);
 ```
 
