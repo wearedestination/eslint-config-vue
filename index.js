@@ -1,6 +1,8 @@
 import tseslint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
-import destinationEsLintConfig from "@destination/eslint-config";
+import destinationEsLintConfig, {
+  prettierSafeOverrides,
+} from "@destination/eslint-config";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default tseslint.config(
@@ -54,5 +56,10 @@ export default tseslint.config(
       ],
     },
   },
+  // eslint-plugin-vue's recommended config is extended after the base config, so
+  // its stylistic rules come back on and eslintConfigPrettier has to run again
+  // here. That also re-disables the base config's prettier-safe overrides, so
+  // they have to be re-applied last.
   eslintConfigPrettier,
+  prettierSafeOverrides,
 );
