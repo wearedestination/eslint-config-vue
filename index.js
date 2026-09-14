@@ -17,6 +17,16 @@ export default tseslint.config(
       },
     },
     rules: {
+      // `consistent-boolean-name` only recognises `ref()`/`computed()` called
+      // directly on a `vue` import, so a boolean held by any other ref —
+      // VueUse's composables, our own — reads as non-boolean and an idiomatic
+      // `isFoo` gets reported. Mapping `Ref` to `value` resolves it through the
+      // type checker instead, which covers the whole family: `ShallowRef` and
+      // `ComputedRef` both extend `Ref`.
+      "unicorn/consistent-boolean-name": [
+        "error",
+        { wrappers: { Ref: "value" } },
+      ],
       "vue/multi-word-component-names": "off",
       "vue/no-mutating-props": [
         "error",
