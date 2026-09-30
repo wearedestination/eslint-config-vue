@@ -66,6 +66,14 @@ export default tseslint.config(
       ],
     },
   },
+  {
+    // `<script setup>` bindings are compiled into `setup()`, so they're
+    // per-instance even though the parser sees them as module scope.
+    files: ["**/*.vue"],
+    rules: {
+      "unicorn/no-top-level-assignment-in-function": "off",
+    },
+  },
   // eslint-plugin-vue's recommended config is extended after the base config, so
   // its stylistic rules come back on and eslintConfigPrettier has to run again
   // here. That also re-disables the base config's prettier-safe overrides, so
