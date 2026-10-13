@@ -53,6 +53,7 @@ export default tseslint.config(
       "vue/block-lang": ["error", { script: { lang: "ts" } }],
       "vue/require-typed-ref": "error",
       "vue/define-props-declaration": ["error", "type-based"],
+      "vue/define-props-destructuring": "error",
       "vue/define-emits-declaration": ["error", "type-based"],
       "vue/define-macros-order": [
         "error",
